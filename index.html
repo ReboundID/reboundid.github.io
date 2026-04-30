@@ -567,7 +567,7 @@ function orderWA() {
   msg += `\nMohon konfirmasi ketersediaan dan total harga. Terima kasih!`;
 
   const encoded = encodeURIComponent(msg);
-  window.open(`https://wa.me/6281284258980?text=${encoded}`, '_blank');
+  window.location.href = `https://wa.me/6281284258980?text=${encoded}`;
 }
 </script>
 
