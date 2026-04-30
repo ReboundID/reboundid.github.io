@@ -550,15 +550,17 @@ function orderWA() {
   const nama = document.getElementById('nama').value.trim();
   const grade = document.getElementById('grade').value;
   const jumlah = document.getElementById('jumlah').value;
-  const lokasi = document.getElementById('lokasi').value.trim();
-  const catatan = document.getElementById('catatan').value.trim();
 
   if (!nama || !grade || !jumlah) {
     alert('Mohon isi Nama, Grade, dan Jumlah dulu ya!');
     return;
   }
 
-  let msg = `Halo Rebound! 🎾\n\nSaya mau order bola tenis:\n\n`;
+  const msg = "Halo Rebound! Saya mau order bola tenis. Nama: " + nama + ". Grade: " + grade + ". Jumlah: " + jumlah;
+  const url = "https://api.whatsapp.com/send?phone=6281284258980&text=" + encodeURIComponent(msg);
+  window.location.href = url;
+}
+</script>
   msg += `👤 Nama: ${nama}\n`;
   msg += `🎾 Grade: ${grade}\n`;
   msg += `📦 Jumlah: ${jumlah}\n`;
